@@ -8,7 +8,7 @@
     "linkCount": 2,
     "due": "2025-07-30",
     "priority": "high",
-    "image": "/images/design-task.png"
+    "image": "/images/design-task.jpeg"
   },
   {
     "id": 2,
@@ -79,7 +79,7 @@
   {
     "id": 8,
     "title": "Client feedback integration",
-    "status": "in progress",
+    "status": "reject",
     "category": "Feedback",
     "messageCount": 6,
     "linkCount": 2,

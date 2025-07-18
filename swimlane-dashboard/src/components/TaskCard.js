@@ -12,7 +12,7 @@ export default function TaskCard({ task }) {
       <div className="flex justify-between items-start">
         <div className="flex items-center space-x-2">
           <div className={`w-3 h-3 rounded ${categoryColor}`}></div>
-          <span className="text-sm font-medium text-gray-600">{task.category}</span>
+          <span className="text-sm font-medium text-gray-400">{task.category}</span>
         </div>
         <FaEllipsisH className="text-gray-400 cursor-pointer" />
       </div>
