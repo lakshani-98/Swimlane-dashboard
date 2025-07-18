@@ -17,17 +17,19 @@ export default function HomePage() {
     tasks.filter((task) => task.status === status);
 
   return (
-    <div className="flex h-screen">
+  <div className="h-screen flex flex-col">
+    <Header />
+
+    <div className="flex flex-1">
       <Sidebar />
-      <div className="flex flex-col flex-1">
-        <Header />
-        <div className="p-4 overflow-x-auto flex space-x-6">
-          <Swimlane title="To Do" tasks={getTasksByStatus('todo')} />
-          <Swimlane title="In Progress" tasks={getTasksByStatus('in progress')} />
-          <Swimlane title="Approved" tasks={getTasksByStatus('approved')} />
-          <Swimlane title="Rejected" tasks={getTasksByStatus('reject')} />
-        </div>
+      <div className="flex-1 p-4 overflow-x-auto flex space-x-6">
+        <Swimlane title="To Do" tasks={getTasksByStatus('todo')} />
+        <Swimlane title="In Progress" tasks={getTasksByStatus('in progress')} />
+        <Swimlane title="Approved" tasks={getTasksByStatus('approved')} />
+        <Swimlane title="Rejected" tasks={getTasksByStatus('reject')} />
       </div>
     </div>
-  );
+  </div>
+);
+
 }
