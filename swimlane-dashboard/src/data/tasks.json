@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Create user flow",
+    "status": "todo",
+    "category": "Design",
+    "messageCount": 4,
+    "linkCount": 2,
+    "due": "2025-07-30",
+    "priority": "high",
+    "image": "/images/design-task.png"
+  },
+  {
+    "id": 2,
+    "title": "Conduct user interviews",
+    "status": "in progress",
+    "category": "Research",
+    "messageCount": 5,
+    "linkCount": 1,
+    "due": "2025-07-25",
+    "priority": "low",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "title": "Team feedback session",
+    "status": "approved",
+    "category": "Feedback",
+    "messageCount": 3,
+    "linkCount": 4,
+    "due": "2025-07-28",
+    "priority": "high",
+    "image": "/images/feedback.png"
+  },
+  {
+    "id": 4,
+    "title": "Prepare presentation slides",
+    "status": "todo",
+    "category": "Presentation",
+    "messageCount": 1,
+    "linkCount": 0,
+    "due": "2025-07-29",
+    "priority": "low",
+    "image": ""
+  },
+  {
+    "id": 5,
+    "title": "UX research analysis",
+    "status": "in progress",
+    "category": "UX Research",
+    "messageCount": 2,
+    "linkCount": 2,
+    "due": "2025-08-01",
+    "priority": "high",
+    "image": "/images/ux-research.png"
+  },
+  {
+    "id": 6,
+    "title": "Interface design update",
+    "status": "reject",
+    "category": "Interface",
+    "messageCount": 0,
+    "linkCount": 1,
+    "due": "2025-07-20",
+    "priority": "low",
+    "image": ""
+  },
+  {
+    "id": 7,
+    "title": "Review other department feedback",
+    "status": "approved",
+    "category": "Other",
+    "messageCount": 4,
+    "linkCount": 3,
+    "due": "2025-07-27",
+    "priority": "high",
+    "image": ""
+  },
+  {
+    "id": 8,
+    "title": "Client feedback integration",
+    "status": "in progress",
+    "category": "Feedback",
+    "messageCount": 6,
+    "linkCount": 2,
+    "due": "2025-08-05",
+    "priority": "high",
+    "image": "/images/client-feedback.png"
+  }
+]
