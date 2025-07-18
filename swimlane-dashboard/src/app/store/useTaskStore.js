@@ -4,7 +4,12 @@ const TASKS_KEY = 'task-board-data';
 
 export const useTaskStore = create((set) => ({
   tasks: [],
-  
+  searchQuery: '',
+
+  setSearchQuery: (query) => {
+    set({ searchQuery: query });
+  },
+
   loadTasks: async () => {
     const saved = localStorage.getItem(TASKS_KEY);
     if (saved) {

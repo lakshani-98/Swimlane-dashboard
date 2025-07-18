@@ -5,7 +5,7 @@ import { FaPlus, FaEllipsisH } from 'react-icons/fa';
 import { useTaskStore } from '../app/store/useTaskStore';
 
 export default function Swimlane({ title }) {
-  const { tasks, updateTaskStatus } = useTaskStore();
+  const { tasks, updateTaskStatus, searchQuery } = useTaskStore();
 
   const titleColors = {
     'to do': 'bg-gray-300 text-gray-800',
@@ -30,7 +30,14 @@ export default function Swimlane({ title }) {
   };
 
   const status = getStatusKey(title);
-  const filteredTasks = tasks.filter((task) => task.status === status);
+
+  // Filter tasks by search query
+  const filteredTasks = tasks.filter(
+    (task) =>
+      task.status === status &&
+      (!searchQuery || (task.title?.toLowerCase().includes(searchQuery.toLowerCase())))
+  );
+
   const btnClass = titleColors[status] || 'bg-gray-200 text-gray-800';
 
   const handleDrop = (e) => {
@@ -44,7 +51,7 @@ export default function Swimlane({ title }) {
 
   return (
     <div
-      className="bg-white rounded-md shadow-md p-4 w-72 flex flex-col"
+      className="bg-white rounded-md shadow-md p-4 min-w-[300px] flex flex-col"
       onDrop={handleDrop}
       onDragOver={allowDrop}
     >

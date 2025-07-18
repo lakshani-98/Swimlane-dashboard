@@ -1,7 +1,12 @@
+'use client';
 import { FaBell, FaUserCircle } from 'react-icons/fa';
 import Image from 'next/image';
+import { useTaskStore } from '../app/store/useTaskStore';
 
 export default function Header() {
+  const searchQuery = useTaskStore((state) => state.searchQuery);
+  const setSearchQuery = useTaskStore((state) => state.setSearchQuery);
+
   return (
     <header className="bg-white shadow-md min-h-[75px] flex items-center justify-between px-6 py-1 w-full">
       {/* Logo and Product Name */}
@@ -23,6 +28,8 @@ export default function Header() {
           type="text"
           placeholder="Search tasks..."
           className="border rounded px-4 py-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
 
         <FaBell className="text-2xl text-gray-600 cursor-pointer" />
