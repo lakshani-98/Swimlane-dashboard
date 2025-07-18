@@ -17,7 +17,7 @@ export default function ProjectHeader() {
   ];
 
   return (
-    <div className="mb-6 px-4">
+    <div className="mb-6">
       <div className="bg-white p-4 rounded shadow">
         <div className="flex items-center gap-4 mb-2">
           <h2 className="text-2xl font-bold">{projectTitle}</h2>

@@ -1,20 +1,17 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Swimlane from '../components/Swimlane';
-import taskData from '../data/tasks.json';
 import ProjectHeader from '../components/ProjectHeader';
+import { useTaskStore } from './store/useTaskStore';
 
 export default function HomePage() {
-  const [tasks, setTasks] = useState([]);
+  const { loadTasks } = useTaskStore();
 
   useEffect(() => {
-   setTasks(taskData);
-  }, []);
-
-  const getTasksByStatus = (status) =>
-    tasks.filter((task) => task.status === status);
+    loadTasks();
+  }, [loadTasks]);
 
   return (
     <div className="h-screen flex flex-col">
@@ -27,10 +24,10 @@ export default function HomePage() {
           <ProjectHeader />
 
           <div className="flex overflow-x-auto space-x-6 mt-4">
-            <Swimlane title="To Do" tasks={getTasksByStatus('todo')} />
-            <Swimlane title="In Progress" tasks={getTasksByStatus('in progress')} />
-            <Swimlane title="Approved" tasks={getTasksByStatus('approved')} />
-            <Swimlane title="Rejected" tasks={getTasksByStatus('reject')} />
+            <Swimlane title="To Do" />
+            <Swimlane title="In Progress" />
+            <Swimlane title="Approved" />
+            <Swimlane title="Reject" />
           </div>
         </div>
       </div>

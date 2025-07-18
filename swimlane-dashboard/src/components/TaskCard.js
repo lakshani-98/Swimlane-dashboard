@@ -7,8 +7,16 @@ export default function TaskCard({ task }) {
   const categoryColor = categoryColors[task.category] || 'bg-gray-200';
   const priorityColor = task.priority === 'high' ? 'text-red-600' : 'text-green-600';
 
+  const onDragStart = (e) => {
+    e.dataTransfer.setData('text/plain', task.id.toString());
+  };
+
   return (
-    <div className="bg-white p-4 rounded-md shadow-sm space-y-3">
+    <div
+      className="bg-white p-4 rounded-md shadow-sm space-y-3 cursor-move"
+      draggable
+      onDragStart={onDragStart}
+    >
       <div className="flex justify-between items-start">
         <div className="flex items-center space-x-2">
           <div className={`w-3 h-3 rounded ${categoryColor}`}></div>
